@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
 	public Text countText;
 	public Text winText;
 	private int count;
-	private int numPickups = 12;
 	public GameObject gamePlay;
 	public GameObject levelDesign;
 	public GameObject player;
@@ -42,7 +41,7 @@ public class PlayerController : MonoBehaviour
 			count++;
 			SetCountText();
 		}
-		if (count >= numPickups) {
+		if (count >= 12) {
 			winText.text="YOU WIN!";
 			btnContinue.SetActive(true);
 		}
@@ -65,7 +64,11 @@ public class PlayerController : MonoBehaviour
 		countText.text = "";
 
 		//Set pickups to active
-		resetPickups();
+		foreach(Transform pickup in pickups.transform)
+		{
+			pickup.gameObject.SetActive(true);
+		}
+
 
 		gamePlay.SetActive(false);
 		levelDesign.SetActive(true);
@@ -75,8 +78,6 @@ public class PlayerController : MonoBehaviour
 		
 	public void EnableGamePlayMode () 
 	{
-		resetPickups();
-
 		playPlayTheme();
 		//Reset score
 		count = 0;
@@ -101,15 +102,5 @@ public class PlayerController : MonoBehaviour
 	{
 		cameraAudioSource.clip = playTheme;
 		cameraAudioSource.Play();
-	}
-
-	private void resetPickups()
-	{
-		numPickups = 0;
-		foreach(Transform pickup in pickups.transform)
-		{
-			pickup.gameObject.SetActive(true);
-			numPickups++;
-		}
 	}
 }

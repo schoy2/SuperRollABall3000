@@ -13,8 +13,6 @@ GameObject:
   - 23: {fileID: 2365090}
   - 114: {fileID: 11465090}
   - 54: {fileID: 5492766}
-  - 64: {fileID: 6490856}
-  - 114: {fileID: 11490856}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Pickup
@@ -76,19 +74,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6490856
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165090}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &6565090
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -110,17 +95,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac38e8d1ec54dac4d9f60232f10c03a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11490856
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79521a0fa0e7c5d41b3bd19a198393a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000
