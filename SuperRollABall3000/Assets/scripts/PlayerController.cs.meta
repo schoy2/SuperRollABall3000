@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1c1871cceb070c845b214a2f7ceaa466
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - countText: {instanceID: 0}
+  - winText: {instanceID: 0}
+  - gamePlay: {instanceID: 0}
+  - levelDesign: {instanceID: 0}
+  - player: {instanceID: 0}
+  - btnContinue: {instanceID: 0}
+  - pickups: {instanceID: 0}
+  - setupTheme: {fileID: 8300000, guid: fd062f4f0d110684a835b51461205517, type: 3}
+  - playTheme: {fileID: 8300000, guid: 6e0b3b2d8c5b3654a9a99a215a683626, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
