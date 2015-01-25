@@ -63,11 +63,17 @@ public class PlayerController : MonoBehaviour
 		winText.text = "";
 		countText.text = "";
 
+		//Set pickups to active
+		foreach(Transform pickup in pickups.transform)
+		{
+			pickup.gameObject.SetActive(true);
+		}
+
+
 		gamePlay.SetActive(false);
 		levelDesign.SetActive(true);
 		player.SetActive(false);
 		btnContinue.SetActive(true);
-		//TODO: Instantiate objects
 	}
 		
 	public void EnableGamePlayMode () 
@@ -77,18 +83,6 @@ public class PlayerController : MonoBehaviour
 		count = 0;
 		SetCountText ();
 
-
-		//Set pickups to active
-		foreach(Transform pickup in pickups.transform)
-		{
-			pickup.gameObject.SetActive(true);
-		}	
-
-		//Spawn player
-		//Instantiate(player, new Vector3(0.0f, 0.5f, 0.0f),Quaternion.i)
-
-
-
 		//Set gui active status
 		gamePlay.SetActive(true);
 		levelDesign.SetActive(false);
@@ -96,8 +90,6 @@ public class PlayerController : MonoBehaviour
 		//Show the player and hide the continue button
 		player.SetActive(true);
 		btnContinue.SetActive(false);
-
-		//TODO: clear existing objects
 	}
 
 	void playSetupTheme()
