@@ -19,13 +19,21 @@ public class PlayerController : MonoBehaviour
 	public AudioClip setupTheme;
 	public AudioClip playTheme;
 	public AudioSource cameraAudioSource;
-
+	public GameObject mainCamera;
+	public GameContext game = GameContext.Game;
 	void Start()
 	{
 		count = 0;
 		SetCountText ();
 	}
-	void FixedUpdate () {
+
+	void LateStart()
+	{		
+		SetCameraPositionLevelDesign();
+	}
+
+	void FixedUpdate () 
+	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
@@ -46,8 +54,8 @@ public class PlayerController : MonoBehaviour
 			winText.text="YOU WIN!";
 			btnContinue.SetActive(true);
 		}
-		//Destroy(other.gameObject);
 	}
+
 	void SetCountText()
 	{
 		countText.text = "count: "+count.ToString();
@@ -55,6 +63,9 @@ public class PlayerController : MonoBehaviour
 	
 	public void EnableLevelDesignMode () 
 	{
+		game.GameState = GameContext.GameStates.LevelDesign;
+		SetCameraPositionLevelDesign();
+
 		playSetupTheme();
 
 		//Set Ball Position and velocity
@@ -75,6 +86,7 @@ public class PlayerController : MonoBehaviour
 		
 	public void EnableGamePlayMode () 
 	{
+		game.GameState = GameContext.GameStates.Play;
 		resetPickups();
 
 		playPlayTheme();
@@ -89,6 +101,8 @@ public class PlayerController : MonoBehaviour
 		//Show the player and hide the continue button
 		player.SetActive(true);
 		btnContinue.SetActive(false);
+
+		SetCameraPositionPlayMode();
 	}
 
 	void playSetupTheme()
@@ -111,5 +125,15 @@ public class PlayerController : MonoBehaviour
 			pickup.gameObject.SetActive(true);
 			numPickups++;
 		}
+	}
+	private void SetCameraPositionLevelDesign()
+	{
+		mainCamera.transform.position = new Vector3(0.0f, 20.0f, 0.0f);
+		mainCamera.transform.rotation = Quaternion.Euler(new Vector3(90, 0, 0));
+	}
+	private void SetCameraPositionPlayMode()
+	{
+		mainCamera.transform.position = new Vector3(0.0f, 20.0f, -20.0f);
+		mainCamera.transform.rotation = Quaternion.Euler(new Vector3(45,0,0));
 	}
 }

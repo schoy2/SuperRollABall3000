@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &59871046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1249465042}
+  gamePlay: {fileID: 219587663}
 --- !u!1 &257265817
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +558,7 @@ MeshCollider:
   m_GameObject: {fileID: 257265817}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -1614,7 +1615,7 @@ MeshCollider:
   m_GameObject: {fileID: 666078610}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2278,7 +2279,7 @@ MeshCollider:
   m_GameObject: {fileID: 1063750606}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2745,7 +2746,7 @@ MeshCollider:
   m_GameObject: {fileID: 1220029139}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2927,6 +2928,7 @@ MonoBehaviour:
   setupTheme: {fileID: 8300000, guid: fd062f4f0d110684a835b51461205517, type: 3}
   playTheme: {fileID: 8300000, guid: 6e0b3b2d8c5b3654a9a99a215a683626, type: 3}
   cameraAudioSource: {fileID: 1076454121}
+  mainCamera: {fileID: 219587663}
 --- !u!54 &1249465044
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3118,7 +3120,7 @@ MeshCollider:
   m_GameObject: {fileID: 1295307521}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -3529,7 +3531,7 @@ MeshCollider:
   m_GameObject: {fileID: 1357774605}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -3659,7 +3661,7 @@ MeshCollider:
   m_GameObject: {fileID: 1366089663}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -3789,7 +3791,7 @@ MeshCollider:
   m_GameObject: {fileID: 1406613314}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -4152,7 +4154,7 @@ MeshCollider:
   m_GameObject: {fileID: 1631050251}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -4466,7 +4468,7 @@ MeshCollider:
   m_GameObject: {fileID: 1731746344}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -4822,7 +4824,7 @@ MeshCollider:
   m_GameObject: {fileID: 1914591293}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -4952,7 +4954,7 @@ MeshCollider:
   m_GameObject: {fileID: 1981532851}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
